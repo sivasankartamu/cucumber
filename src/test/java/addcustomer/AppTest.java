@@ -1,4 +1,4 @@
-package org.siva.Sample;
+package addcustomer;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

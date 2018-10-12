@@ -1,4 +1,4 @@
-package org.siva.Sample;
+package addcustomer;
 
 import java.util.List;
 
@@ -29,9 +29,10 @@ public class ListMapadctr {
 	    driver.findElement(By.name("password")).sendKeys(log.get(1));
 	    driver.findElement(By.name("btnLogin")).click();
 	    Thread.sleep(3000);
+	    driver.findElement(By.xpath("//a[text()='New Customer']")).click();
 	}
 
-	@When("^Fill the form <name>and<dob>and<addr>and<city>and<state>and<pin>and<mob>and<email>$")
+	@When("^Fill the form$")
 	public void fill_the_form(DataTable t) throws Throwable {
 	    List<List<String>> fill = t.asLists(String.class);
 	    driver.findElement(By.name("name")).sendKeys(fill.get(1).get(0));
@@ -40,6 +41,7 @@ public class ListMapadctr {
 		driver.findElement(By.name("city")).sendKeys(fill.get(1).get(3));
 		driver.findElement(By.name("state")).sendKeys(fill.get(1).get(4));
 		driver.findElement(By.name("pinno")).sendKeys(fill.get(1).get(5));
+		
 		driver.findElement(By.name("telephoneno")).sendKeys(fill.get(1).get(6));
 		driver.findElement(By.name("emailid")).sendKeys(fill.get(1).get(7));
 	}
@@ -55,13 +57,14 @@ public class ListMapadctr {
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement x = driver.findElement(By.name("sub"));
 		System.out.println(x);
-		WebElement y = driver.findElement(By.name("reset"));
+		WebElement y = driver.findElement(By.name("res"));
 		System.out.println(y);
 	}
 
 	@Then("^Present value$")
 	public void present_value()  {
 	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("donee by sivasankar");
 	    
 	}
 

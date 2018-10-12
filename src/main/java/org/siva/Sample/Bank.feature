@@ -27,13 +27,5 @@ Feature: Test the bank application
     |mngr157083|mngr157083|
     And Click login    
     Then test is this correct
-    
-
-  @tag2
-  Scenario Outline: Task to fill all vales
-    Given Next url
-    When Check fields
-    |sivasankar|
-    Then Done
 
     

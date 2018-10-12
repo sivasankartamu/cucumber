@@ -1,4 +1,4 @@
-package org.siva.Sample;
+package addcustomer;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
